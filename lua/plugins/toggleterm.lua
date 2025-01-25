@@ -2,10 +2,10 @@ return {
   {
     "akinsho/toggleterm.nvim",
     version = "*",
-    config = function ()
+    config = function()
       require("toggleterm").setup({
         open_mapping = [[<C-\>]],
-        shell = "fish"
+        shell = "bash"
       })
     end
   },

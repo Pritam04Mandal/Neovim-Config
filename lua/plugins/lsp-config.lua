@@ -10,7 +10,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         PATH = "prepend",
-        ensure_installed = { "lua_ls", "ts_ls", "html","jdtls","tailwindcss"},
+        ensure_installed = { "lua_ls", "tsserver", "html", "jdtls", "tailwindcss" },
       })
     end,
   },
@@ -25,14 +25,14 @@ return {
       lspconfig.html.setup({
         capabilities = capabilities
       })
-      lspconfig.ts_ls.setup({
+      lspconfig.tsserver.setup({
         capabilities = capabilities,
       })
       lspconfig.jdtls.setup({
         capabilities = capabilities,
       })
       lspconfig.tailwindcss.setup({
-	capabilities = capabilities,
+        capabilities = capabilities,
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
